@@ -35,10 +35,12 @@ function FAQs() {
                       <div className='title' onClick={() => toggle(i)}>
                         <div className='quest'>
                           <h2>{item.question}</h2>
+
                           <span>{selected === i ?  
                           <img className='img-icon' src={up} alt='icon'/>: 
                           <img className='img-icon' src={down} alt='icon'/> 
                           } </span>
+
                         </div>
                       </div>
                       <div className='cont'>
