@@ -1,5 +1,7 @@
 import React from "react";
 import Homepage from "./Homepage";
+import FAQs from './Faq';
+
 function App() {
   const [data, setData] = React.useState(null);
 
@@ -13,6 +15,7 @@ function App() {
       <header className="App-header">
         <p>{!data ? "" : data}</p>
       </header>
+      < FAQs />
       <Homepage />
     </div>
   );
