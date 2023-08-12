@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import Homepage from "./Homepage";
 import Footer from "./Footer";
 import Newsletter from "./Newsletter";

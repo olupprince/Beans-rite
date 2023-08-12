@@ -23,8 +23,8 @@
   align-items: flex-start;
 }
 .col > img {
-  height: 8rem;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
   border-radius: 35px;
   margin-left: -25px;
 }
@@ -154,7 +154,7 @@
   height: 8rem;
   width: 8rem;
   border-radius: 35px;
-  margin-left: -25px;
+  margin-left: -30px;
 }
 .col:nth-child(2) {
   align-items: center;
