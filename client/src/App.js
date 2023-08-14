@@ -2,8 +2,9 @@ import React from "react";
 import "./App.css";
 import Homepage from "./Homepage";
 
-import FAQs from './Faq';
-
+import FAQs from "./Faq";
+import Newsletter from "./Newsletter";
+import Footer from "./Footer";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -20,9 +21,9 @@ function App() {
       </header>
       <Homepage />
 
-      < FAQs />
-
-
+      <FAQs />
+      <Newsletter />
+      <Footer />
     </div>
   );
 }
