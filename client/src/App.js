@@ -1,8 +1,10 @@
 import React from "react";
 import "./App.css";
 import Homepage from "./Homepage";
-import Footer from "./Footer";
-import Newsletter from "./Newsletter";
+
+import FAQs from './Faq';
+
+
 function App() {
   const [data, setData] = React.useState(null);
 
@@ -17,8 +19,10 @@ function App() {
         <p>{!data ? "" : data}</p>
       </header>
       <Homepage />
-      <Newsletter />
-      <Footer />
+
+      < FAQs />
+
+
     </div>
   );
 }
