@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+.ComboDeal {
+  background-color:#fd7e14;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  color: #190d02f6;
+}
+/* Add this to your existing CSS */
+
+
+
+.image-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.larger-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .larger-image {
+  opacity: 1;
+}
+
+.combo {
+  text-align: center;
+  color:#fd7e14;
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+.add {
+  color: #fd7e14;
+  padding-left: 17px;
+}
+
+.container {
+  justify-items: center;
+  box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff2e8;
+  border-radius: 30px;
+  margin-top: 0px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.combo_deals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beans,
+.pulpy {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.foodname {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  margin: 10px 0;
+}
+
+.price {
+  text-align: center;
+  color: #fd7e14;
+  font-weight:500;
+  font-size: large;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #fd7e14;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff9800;
+}
+
+.minus,
+.plus {
+  font-size: 18px;
+  margin: 0 5px;
+
+}
+.plus{
+  margin-left: 8px;
+}
+.min{
+  margin-top: -5px;
+  margin-left: -1px;
+}
+.plu{
+  margin-top: -3px;
+  margin-left: -2.5px;
+}
+.value{
+  font-weight: 400px;
+  font-size: large;
+}
+button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container,
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container,
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.login{
+  color:#ff9800;
+  font-weight: bold;
+}
+
+.login-container {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  height: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+input {
+  width: 93%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+.btnLog, .btnReg {
+  width: 100%;
+  padding: 10px;
+  background-color:#ff8c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+.btnLog{
+  height: 35px;
+}
+.btnReg{
+  height: 35px;
+  width: 94%;
+}
+
+.btnLog:hover, .btnReg:hover {
+  background-color: #ff8c00;
+}
+
+.error {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+span{
+  color: black;
+}
+
+.register-link{
+  text-align: center;
+  font-size: small;
+}
+.log{
+  color:#ff9800;
+  text-align: center;
+
+
+}
