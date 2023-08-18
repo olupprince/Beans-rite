@@ -2,7 +2,7 @@ const joi = require('joi');
 
 const validator = (data)=>{
     schema = joi.object({
-        foodName: joi.string().alphanum().uppercase().required(),
+        foodName: joi.string().uppercase().required(),
         description: joi.string().required(),
         price: joi.number().required(),
     });

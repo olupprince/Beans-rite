@@ -1,9 +1,12 @@
-const Foods = require("../Model/foodSchema");
+const Foods = require("../models/foodSchema");
 
 const get1Food = async (req, res,) => {
+
+    const foodId = req.params.id;
+    console.log(foodId);
+
     try {
 
-        const foodId = req.params.id;
 
         const oneFood = await Foods.findById({_id:foodId});
 

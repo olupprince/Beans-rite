@@ -1,6 +1,6 @@
-const Foods = require('../Model/foodSchema');
+const Foods = require('../models/foodSchema');
 const route = require('../Router/routes');
-const {validator} = require('../Validator/validator')
+const {validator} = require('../Validator/validator');
 
 const postFoods = async (req, res) => {
     console.log(req.body);
