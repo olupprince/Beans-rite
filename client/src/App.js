@@ -15,8 +15,8 @@ function App() {
       <header className="App-header">
         <p>{!data ? "" : data}</p>
       </header>
-      < FAQs />
       <Homepage />
+      < FAQs />
     </div>
   );
 }
