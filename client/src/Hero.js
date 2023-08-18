@@ -1,4 +1,5 @@
 import img from "./beansLogo.png";
+// import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div className="hero-container">
@@ -32,9 +33,11 @@ export default function Hero() {
                 </a>
               </li>
               <li>
-                <a className="nav-list-item" href="ll">
+                {/* <Link to="/cart"> */}
+                <a className="nav-list-item" href="combo">
                   Combo Deals
                 </a>
+                {/* </Link> */}
               </li>
               <li>
                 <a className="nav-list-item" href="ll">

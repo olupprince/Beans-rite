@@ -1,27 +1,29 @@
 const express = require("express");
 const app = express();
-// const routes = require("./routes");
+const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
-// const mongoose = require("mongoose");
-// const uri = "";
-// mongoose
-//   .connect(uri, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => {
-//     console.log("mongo connected");
-//   })
+const uri =
+  "MONGODB_URI = mongodb+srv://lordyemight:O3Xr5hwNOwfCyQDT@transactions.mqiqfnf.mongodb.net";
+const mongoose = require("mongoose");
 
-//   .catch((error) => {
-//     console.error("error connecting to Mongo:", error);
-//   });
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("mongo connected");
+  })
 
-// app.use(routes);
+  .catch((error) => {
+    console.error("error connecting to Mongo:", error);
+  });
 
-app.get("./api", (req, res) => {
-  res.json({ message: "Listening from server!" });
-});
+app.use(routes);
+
+// app.get("./api", (req, res) => {
+//   res.json({ message: "Listening from server!" });
+// });
 
 app.listen(PORT, () => {
   console.log("Server Listening on ${PORT}");

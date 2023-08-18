@@ -1,10 +1,11 @@
 import React from "react";
-import "./Prince.css";
+// import { link } from "react-router-dom";
+import "./prince.css";
 import img1 from "./img/beans-img.jpg";
 import img2 from "./img/beans-img1.jpg";
 import img3 from "./img/beans-img8.jpg";
 
-function Homepage() {
+function Cart() {
   return (
     <div className="container">
       <h4>Bill Details</h4>
@@ -94,4 +95,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Cart;
