@@ -1,0 +1,85 @@
+.Containerwe{
+    background-color: darkgray;
+    margin: 30px auto;
+    width: 95%;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    font-style: italic;
+  
+  }
+  
+  .Special-Cards {
+    /* border: 2px solid red; */
+    width: 94%;
+    height: 600px;
+    display: flex;
+  }
+  
+  .Card-1{
+    width: 30%;
+    height: 500px;
+    /* border: 2px solid black; */
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 40px 20px;
+    background-color: #fff2e8;
+  }
+  
+  .Card-2 {
+    width: 30%;
+    height: 500px;
+    /* border: 2px solid black; */
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 40px 20px;
+    background-color: #fff2e8;
+  }
+  
+  .Card-3{
+    width: 30%;
+    height: 500px;
+    /* border: 2px solid black; */
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 40px 20px;
+    background-color: #fff2e8;
+  }
+  
+  .img-special{
+    width: 100%;
+    max-width: 300px;
+    min-height: 200px;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .Btn-Pack{
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: #8b5c35;
+    color: white;
+    height: 40px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin: 15px auto;
+  }
+  
+  .Btn-Pack:hover{
+    background-color: darkgray;
+  }
+  
+  .Btn-Pack:Active{
+    transform: translateY(3px);
+  }
+  
