@@ -15,6 +15,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  phone_no: {
+    type: Number,
+    required: true
+  },
   createdAt: {
     type: Date,
     default: moment().tz('Your_Timezone').add(1, 'hours').toDate(),
