@@ -1,3 +1,5 @@
+// import React, { useState } from "react";
+
 // function BensCard({ menu }) {
 //   const [quantityOrdered, setQuantityOrdered] = useState(0);
 
@@ -47,9 +49,13 @@
 //     </div>
 //   );
 // }
-import React, { useState } from "react";
 
-function BensCard({ menu, addToCart }) {
+// export default BensCard;
+
+import React, { useState } from "react";
+import Cartmenu from "./Cartmenu";
+
+function BensCard({ menu }) {
   const [quantityOrdered, setQuantityOrdered] = useState(0);
 
   function handleCountUp() {
@@ -62,9 +68,12 @@ function BensCard({ menu, addToCart }) {
     }
   }
 
+  const [menus, setMenus] = useState([]);
+
   function handleAddToCart() {
     const item = { ...menu, quantityOrdered };
-    addToCart(item);
+    setMenus([...menus, item]);
+    // addToCart(item);
   }
 
   return (
@@ -99,6 +108,7 @@ function BensCard({ menu, addToCart }) {
         <button className="btn btn-effect" onClick={handleAddToCart}>
           Add to Cart
         </button>
+        <Cartmenu menu={menus} />
       </div>
     </div>
   );
