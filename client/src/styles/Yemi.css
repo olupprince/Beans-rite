@@ -122,10 +122,11 @@
 button {
   background-color: #fd7e14;
   color: #fff;
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
   border: none;
   border-radius: 100%;
   cursor: pointer;
+  text-align: center;
   width: 28px;
   height: 28px;
   transition: background-color 0.2s ease-in-out;
