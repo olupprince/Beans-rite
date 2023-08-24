@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
 
 .ComboDeal {
-  background-color:#fd7e14;
+  background-color: #fd7e14;
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   color: #190d02f6;
 }
 /* Add this to your existing CSS */
-
-
 
 .image-container {
   position: relative;
@@ -37,7 +35,7 @@
 
 .combo {
   text-align: center;
-  color:#fd7e14;
+  color: #fd7e14;
   font-style: italic;
   margin-bottom: 10px;
   font-size: larger;
@@ -93,7 +91,7 @@
 
 .beans,
 .pulpy {
-  width: 80px;
+  width: 81px;
   height: 80px;
   object-fit: cover;
 }
@@ -108,7 +106,7 @@
 .price {
   text-align: center;
   color: #fd7e14;
-  font-weight:500;
+  font-weight: 500;
   font-size: large;
 }
 
@@ -139,20 +137,19 @@ button:hover {
 .plus {
   font-size: 18px;
   margin: 0 5px;
-
 }
-.plus{
+.plus {
   margin-left: 8px;
 }
-.min{
+.min {
   margin-top: -5px;
   margin-left: -1px;
 }
-.plu{
+.plu {
   margin-top: -3px;
   margin-left: -2.5px;
 }
-.value{
+.value {
   font-weight: 400px;
   font-size: large;
 }
@@ -178,8 +175,8 @@ button:focus {
   }
 }
 
-.login{
-  color:#ff9800;
+.login {
+  color: #ff9800;
   font-weight: bold;
 }
 
@@ -197,10 +194,9 @@ button:focus {
   flex-direction: column;
 }
 
-a{
+a {
   text-decoration: none;
 }
-
 
 input {
   width: 93%;
@@ -214,26 +210,27 @@ input::placeholder {
   color: #999;
 }
 
-.btnLog, .btnReg {
+.btnLog,
+.btnReg {
   width: 100%;
   padding: 10px;
-  background-color:#ff8c00;
+  background-color: #ff8c00;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
 }
-.btnLog{
+.btnLog {
   height: 35px;
 }
-.btnReg{
+.btnReg {
   height: 35px;
   width: 94%;
 }
 
-.btnLog:hover, .btnReg:hover {
+.btnLog:hover,
+.btnReg:hover {
   background-color: #ff8c00;
 }
 
@@ -244,18 +241,15 @@ input::placeholder {
   margin-top: 5px;
 }
 
-
-span{
+span {
   color: black;
 }
 
-.register-link{
+.register-link {
   text-align: center;
   font-size: small;
 }
-.log{
-  color:#ff9800;
+.log {
+  color: #ff9800;
   text-align: center;
-
-
 }
