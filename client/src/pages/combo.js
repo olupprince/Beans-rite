@@ -46,7 +46,7 @@ const Combo = () => {
               <p className="foodname">{combo.title}</p>
               <p className="price">#{combo.price}</p>
               <div className="toggle">
-                <button className="combo-btn">Add to cart &nbsp; 🛒</button>
+                <button className="menu-btn">Add to cart &nbsp; 🛒</button>
               </div>
             </div>
           ))}
