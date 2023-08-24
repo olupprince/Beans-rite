@@ -1,7 +1,7 @@
-
-/* body{
+/* 
+body{
     background: darksalmon;
-} */
+}
 .overall{
     background-color: #e1dede;
 }
@@ -60,7 +60,7 @@ input:hover{
 .objectp{
     margin-top: 1rem;
     /* margin-left: 3rem; */
-}
+/* }
 .delicacyp{
     margin-left: 2rem;
 }
@@ -96,7 +96,8 @@ input:hover{
     padding: 2rem 0 0 1rem;
 }
 .amountpp{
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 700;
     padding: 0.2rem 1rem 0 1rem;
     display: flex;
     align-items: center;
@@ -120,10 +121,10 @@ input:hover{
     transform: scale(1.1);
 }
 .order-summary{
-    margin-top: 3rem;
-}
+    margin-top: 3rem; */
+/* }  */
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .containerp {
         padding: 1rem;
         width: 38rem;
@@ -149,4 +150,13 @@ input:hover{
         margin: 0;
         width: 12rem;
     }
+} */
+
+.containerp{
+    background-color: chocolate;
+}
+.allItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

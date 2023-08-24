@@ -5,6 +5,7 @@ import axios from "axios";
 
 function MenuContainer() {
   const [menus, setMenus] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
     axios
       .get(`http://localhost:5000/api/menu`)
@@ -20,8 +21,14 @@ function MenuContainer() {
   return (
     <div className="menu-container">
       {menus.map((menu) => (
-        <BensCard menu={menu} key={menu._id} />
+        <BensCard
+          menu={menu}
+          key={menu._id}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+        />
       ))}
+      {/* <Cart/> */}
     </div>
   );
 }

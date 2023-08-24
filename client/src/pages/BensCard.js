@@ -1,10 +1,16 @@
 import React, { useState } from "react";
+import { useCart } from "./CartContext";
+// import Cart from "./Cart"
 
 function BensCard({ menu }) {
   const [quantityOrdered, setQuantityOrdered] = useState(0);
-
+  const { addToCart } = useCart();
   function handleCountUp() {
     setQuantityOrdered(quantityOrdered + 1);
+    const newCartItems = { ...menu, quantityOrdered: quantityOrdered + 1 };
+    // console.log(newItems);
+    addToCart(newCartItems);
+    // setCartItems([...cartItems, newItems]);
   }
 
   function handleCountDown() {
