@@ -16,10 +16,11 @@ const App = () => {
     <UserContextProvider>
       <Router>
         <Routes>
+        <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           <Route path='/' element={<Layout/>}>
             <Route index element={<Homepage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
+
             <Route path="/cart" element={<Cart />} />
             <Route path="/services" element={<Services />} />
             <Route path="/specialoffers" element={<SpecialOffer />} />

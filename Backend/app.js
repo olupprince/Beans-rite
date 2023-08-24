@@ -11,7 +11,7 @@ const Combo = require('./models/comboSchema');
 const { foodImgUpload } = require('./utils/fileUpload');
 const uploadTwo = require('./utils/fileuploadTwo');
 const Menu = require('./models/menuSchema');
-
+const secret = process.env.SECRET_KEY 
 
 app.use('/foodImgFolder', express.static(__dirname + '/foodImgFolder'))
 app.use('/images', express.static(__dirname + '/images'))

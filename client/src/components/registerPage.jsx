@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-
+import { Link, useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
   const [username, setUsername] = useState('');
@@ -9,78 +7,85 @@ function RegisterPage() {
   const [password, setPassword] = useState('');
   const [validationError, setValidationError] = useState(null);
   const [registrationError, setRegistrationError] = useState(null);
-  // const history = useHistory(); // Access the history object
-  const navigate = useNavigate(); 
-  async function register (e) {
-    e.preventDefault();
-    const userData = {username, password, email}
-    
+  const navigate = useNavigate();
 
-    // If data is valid, proceed with the registration logic
+  async function register(e) {
+    e.preventDefault();
+    const userData = { username, password, email };
+    const passwordPattern = 'Password should be 3 to 30 characters and alphanumeric';
+
     setValidationError(null);
+    setRegistrationError(null); // Reset any previous errors
+
+    if (username.length < 4) {
+      setValidationError('Username should be at least 4 characters long');
+      return; // Stop further processing if validation fails
+    }
+
     try {
       const response = await fetch('http://localhost:5000/register', {
         method: 'POST',
         body: JSON.stringify(userData),
-        headers: {'Content-Type':'application/json'},
-      })
+        headers: { 'Content-Type': 'application/json' },
+      });
 
-    if (response.ok) {
-      // Registration successful, show success message or redirect to another page
-      alert('Registration successful! You can now log in.');
-      // Optionally, redirect to the login page
-      navigate('/login'); // Use navigate to redirect to '/login'
-        // Reset the form and clear input fields
+      if (response.ok) {
+        alert('Registration successful! You can now log in.');
+        navigate('/login');
         setUsername('');
         setEmail('');
         setPassword('');
-        setValidationError('');
-        setRegistrationError('');
-    } else {
-      // Registration failed, handle error response from the server
-      const data = await response.json();
-      alert(data.error); // Display the error message sent by the server
+      } else {
+        const data = await response.json();
+        if (data.error.includes('password')) {
+          setValidationError(`${passwordPattern}`);
+        } else if (data.error === 'Email is already registered') {
+          setRegistrationError('Email is already registered');
+        } else {
+          setRegistrationError('An error occurred during registration. Please try again later.');
+        }
+      }
+    } catch (error) {
+      console.error('Error during registration:', error);
+      setRegistrationError('An error occurred during registration. Please try again later.');
     }
-  } catch (error) {
-    console.error('Error during registration:', error);
-    // Handle other errors (e.g., network error)
-    setRegistrationError('An error occurred during registration. Please try again later.');// Set the registration error message
   }
-    
 
-  }
   return (
-  <form className="login-container" onSubmit={register}>
-      <h2 className='log'>Register</h2>
-      <input 
-      type="text" 
-      id='username'
-      placeholder="username" 
-      value={username}
-      onChange={(e) => setUsername(e.target.value)}
+    <form className="login-container" onSubmit={register}>
+      <h2 className="log">Register</h2>
+      <input
+        type="text"
+        id="username"
+        placeholder="username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
       />
 
-      <input 
-      type="email" 
-      id="email" 
-      placeholder='email' 
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
+
+      <input
+        type="email"
+        id="email"
+        placeholder="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
 
-      <input 
-      type="password" 
-      id="password" 
-      placeholder="password" 
-      value={password}
-      onChange={(e) => setPassword (e.target.value)}
-    
+      <input
+        type="password"
+        id="password"
+        placeholder="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
       />
-      {validationError && <span className="error">{validationError}</span>}
       {registrationError && <span className="error">{registrationError}</span>}
-      <button className='btnReg' >Register</button>
-  </form>
-  )
+      {validationError && <span className="error">{validationError}</span>}
+      <button className="btnReg">Register</button>
+      <p className="register-link">
+        Already have an account? <Link to="/login">Click to login</Link>.
+      </p>
+    </form>
+  );
 }
 
 export default RegisterPage;

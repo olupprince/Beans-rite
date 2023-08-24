@@ -4,10 +4,10 @@ const bcrypt = require('bcrypt');
 
 const register = async (req, res) => {
   try {
-    const {username, password, email, phone_no} = req.body
+    const {username, password, email} = req.body
     const userData = req.body
-    if (!username || !password || !email || !phone_no){
-      res.json({message: 'Provide username, email, phone-number and password'})
+    if (!username || !password || !email) {
+      res.json({message: 'Provide username, email and password'})
     }
      // Validate data using the Joi schema
     const { error } = schema.validate(userData);
@@ -18,14 +18,9 @@ const register = async (req, res) => {
   
      // check if user exists 
     const existingUser = await User.findOne ({ username })
-    const phone = await User.findOne ({ phone_no })
     if (existingUser) {
       return res.status(409).json({ error: 'User is registered' })
     }
-    if (phone) {
-      return res.status(409).json({ error: 'Phone number is used already' })
-    }
-
     // hash password
     const hashedPassword = await bcrypt.hash(password, 10);
   
@@ -33,8 +28,7 @@ const register = async (req, res) => {
     const newUser = new User ({
       username, 
       email,
-      password: hashedPassword,
-      phone_no
+      password: hashedPassword
     });
       await newUser.save();
     

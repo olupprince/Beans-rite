@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
+import { useCart } from '../Hooks/useCart';
 
 function BensCard({ menu }) {
   const [quantityOrdered, setQuantityOrdered] = useState(0);
+  const { addToCart, removeFromCart } = useCart(); 
 
   function handleCountUp() {
     setQuantityOrdered(quantityOrdered + 1);
+    addToCart(menu, quantityOrdered + 1);
   }
 
   function handleCountDown() {
     if (quantityOrdered >= 1) {
       setQuantityOrdered(quantityOrdered - 1);
+      removeFromCart(menu.id);
     }
   }
 

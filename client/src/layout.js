@@ -1,11 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header'
+import HomeHeader from './HomeHeader';
 
 function Layout () {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   return(
     <main>
-      <Header /> 
+      {isHomePage ? <HomeHeader /> : <Header />}
       <Outlet />
     </main>
   )
