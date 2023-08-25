@@ -9,6 +9,7 @@ import Homepage from './Homepage';
 import Cart from './pages/cart';
 import Services from './pages/Services';
 import SpecialOffer from './pages/SpecialOffer';
+import Flutterwave from './flutterwave'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path='/' element={<Layout/>}>
             <Route index element={<Homepage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/payment" element={<Flutterwave />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/services" element={<Services />} />

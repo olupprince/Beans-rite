@@ -3,8 +3,13 @@ import beans from './img/beansLogo.png';
 import flutt from './img/flawt.jpeg';
 import './flutterwave.css';
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
+import {useLocation} from 'react-router-dom;'
 
 const Flutterwave = () => {
+
+  const locate =useLocation();
+  const {values}= locate.state;
+
   const [paymentData, setPaymentData] = useState({
     amount: 0,
     email: '',
@@ -27,7 +32,7 @@ const Flutterwave = () => {
   const config = {
     public_key: 'FLWPUBK_TEST-25dcf4c3dcae9a5f4c62a009913585b0-X',
     tx_ref: Date.now(),
-    amount: paymentData.amount,
+    amount: values.amount,
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
     customer: {

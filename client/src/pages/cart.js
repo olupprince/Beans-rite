@@ -3,8 +3,15 @@ import "../styles/prince.css";
 import img1 from "../img/beans-img.jpg";
 import img2 from "../img/beans-img1.jpg";
 import img3 from "../img/beans-img8.jpg";
+import { useNavigate } from 'react-router-dom'
 
 function Cart() {
+
+  const navigate = useNavigate();
+  const handlePayment=(e)=>{
+    e.preventDefault();
+    navigate('/payment', {state: 'amount'});
+  }
   return (
     <div className="containerww">
       <h4>Bill Details</h4>
@@ -88,7 +95,7 @@ function Cart() {
         {/* <div className="border">
           <h5>Pay with Card</h5>
         </div> */}
-        <button class="btn22">Submit Order</button>
+        <button class="btn22" onSubmit={handlePayment}>Submit Order</button>
       </div>
     </div>
   );
