@@ -1,30 +1,30 @@
-import React, { useContext, useEffect } from 'react';
-import { Link } from "react-router-dom"
+import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
-import UserContext from './userContext';
+import UserContext from "./userContext";
 
 function Header() {
-  const {setUserInfo, userInfo} = useContext(UserContext);
-  useEffect (()=> {
-    fetch('http://localhost:5000/profile', {
-      credentials: 'include',
-    }).then(response => {
-      response.json().then(userInfo => {
-        setUserInfo(userInfo)
-      })
-    })
+  const { setUserInfo, userInfo } = useContext(UserContext);
+  useEffect(() => {
+    fetch("http://localhost:5000/profile", {
+      credentials: "include",
+    }).then((response) => {
+      response.json().then((userInfo) => {
+        setUserInfo(userInfo);
+      });
+    });
   }, []);
 
-  function logout () {
-    fetch('http://localhost:5000/logout', {
-      credentials: 'include',
-      method: 'POST',
+  function logout() {
+    fetch("http://localhost:5000/logout", {
+      credentials: "include",
+      method: "POST",
     });
     setUserInfo(null);
   }
   const username = userInfo?.username;
   return (
-    <div className='Header'>
+    <div className="Header">
       <div className="nav-flex-container">
         <nav>
           <ul id="navbar">
@@ -33,11 +33,11 @@ function Header() {
                 Menu
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="nav-list-item" to="/services">
                 Services
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link className="nav-list-item" to="/api/getcombos">
                 Combo Deals
@@ -53,18 +53,22 @@ function Header() {
         <div className="nav-btn-box">
           {username && (
             <>
-              <a className="nav-btn" onClick={logout}>Logout</a>
+              <a className="nav-btn" onClick={logout}>
+                Logout
+              </a>
               <span className="nav-btn nav-btn-colored">{username}</span>
             </>
-          )} 
+          )}
           {!username && (
             <>
-              <Link className="nav-btn" to="/login">Log-In</Link>
+              <Link className="nav-btn" to="/login">
+                Log-In
+              </Link>
             </>
           )}
         </div>
       </div>
-      <Link to='/cart'>
+      <Link to="/cart">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -80,11 +84,8 @@ function Header() {
           />
         </svg>
       </Link>
-  
     </div>
-   
   );
 }
-
 
 export default Header;

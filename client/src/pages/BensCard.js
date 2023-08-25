@@ -4,6 +4,9 @@ import { useCart } from '../Hooks/useCart';
 function BensCard({ menu }) {
   const [quantityOrdered, setQuantityOrdered] = useState(0);
   const { addToCart, removeFromCart } = useCart(); 
+  
+  function handleClick(id) {
+    setSelectedId(id !== selectiedId ? id : null);
 
   function handleCountUp() {
     setQuantityOrdered(quantityOrdered + 1);
@@ -24,30 +27,29 @@ function BensCard({ menu }) {
           className="img"
           src={`http://localhost:5000/${menu.foodImg}`}
           alt="beans img"
-          onClick={handleCountUp}
         />
         <div className="description">
           <strong className="dish-name">{menu.food}</strong>
           <p className="dish-description"> {menu.ingredients}</p>
           <div>
-            <span>Available {menu.available} </span>
+            <span className="description-status">
+              Available {menu.available}{" "}
+            </span>
             <span> &bull;</span>
-            <span> sold {menu.sold}</span>
+            <span className="description-status"> sold {menu.sold}</span>
           </div>
         </div>
       </div>
       <div className="click-order">
-        <span className="price">
-          {" "}
-          <sup className="naira">&#8358;</sup>
+        <span className={selectiedId === menu.id ? "color-red" : "price"}>
+          <sup className={selectiedId === menu.id && "color-red"}>&#8358;</sup>
           {menu.price}
         </span>
-        <button className="btn btn-effect" onClick={handleCountDown} >
-          -
-        </button>
-        <span className="quantity-ordered">{quantityOrdered}</span>
-        <button className="btn btn-effect" onClick={handleCountUp}>
-          +
+        <button
+          className={selectiedId === menu.id ? "menu-btn bg-red" : "menu-btn"}
+          onClick={() => handleCountUP}
+        >
+          {menu.id === selectiedId ? menu.addedToCart : menu.cart}
         </button>
       </div>
     </div>
