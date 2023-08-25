@@ -78,6 +78,7 @@ body {
 .nav-btn {
   color: #fff2e8;
   text-decoration: none;
+  cursor: pointer;
 }
 .nav-btn-box {
   margin-left: 30rem;
