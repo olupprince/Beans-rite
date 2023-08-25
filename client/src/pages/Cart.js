@@ -8,7 +8,7 @@ function Cart() {
   return (
     <div className="containerp">
       <div>
-        <h2>Cart</h2>
+        <h2 className="h2p">Cart</h2>
         {cartItems.map((item) => (
           <div className="allItems" key={item._id}>
             <p>{item.food}</p>
@@ -16,6 +16,7 @@ function Cart() {
             <p>&#8358;{item.price}</p>
           </div>
         ))}
+        <button className="btn22">Proceed to Payment</button>
       </div>
     </div>
   );

@@ -153,10 +153,38 @@ input:hover{
 } */
 
 .containerp{
-    background-color: chocolate;
+    /* background-color: chocolate; */
+    width: 65rem;
+    height: 64rem;
+    margin: 0 auto;
+    background-color: #faf2ec;
+    border-radius: 8px;
+    overflow: hidden;
 }
 .allItems{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+.btn22{
+    background:#fd7e14;
+    color: #fff;
+    width: 24rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 2.5rem;
+    margin-left: 20rem;
+    align-items: center;
+}
+.btn22:hover{
+    transform: scale(1.1);
+}
+.h2p{
+    text-align: center;
+    font-size: 3rem;
 }
