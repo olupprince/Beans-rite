@@ -155,7 +155,7 @@ input:hover{
 .containerp{
     /* background-color: chocolate; */
     width: 65rem;
-    height: 64rem;
+    height: 100%;
     margin: 0 auto;
     background-color: #faf2ec;
     border-radius: 8px;

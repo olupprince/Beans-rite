@@ -12,6 +12,14 @@ export function CartDev({ children }) {
   const addToCart = (item) => {
     setCartItems([...cartItems, item]);
   };
+
+  //   const removeFromCart = (item) => {
+  //     const newCartItems = cartItems.filter(
+  //       (cartItem) => cartItem.id !== item.id
+  //     );
+  //     setCartItems(newCartItems);
+  //   };
+
   const value = { cartItems, addToCart };
   return (
     <CartContext.Provider value={value}> {children} </CartContext.Provider>
