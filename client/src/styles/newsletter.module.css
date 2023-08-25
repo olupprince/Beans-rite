@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+
 .containerz {
   height: 300px;
   width: 100%;
@@ -13,6 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Rubik";
 }
 
 .subtitle {
@@ -33,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 2rem;
   border-radius: 20px;
 }
 
@@ -43,7 +46,7 @@
   width: 90%;
   padding: 1rem 0;
   transition: 150ms all;
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
 
 .inputContainer > input::placeholder {
@@ -55,7 +58,11 @@
 }
 
 .inputContainer:focus-within {
-
+  border-color: #fd7e14;
+}
+.sendIcon:hover {
+  color: #fd7e14;
+  cursor: pointer;
 }
 
 .sendIcon {

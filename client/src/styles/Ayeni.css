@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 .containerxx {
   padding-top: 150px;
@@ -12,9 +10,9 @@
   justify-content: center;
   overflow: hidden;
   gap: 2rem;
-  background-color:#fff2e8;
+  background-color: #fff2e8;
 }
-.image{
+.image {
   width: 30rem;
   max-height: 20rem;
   margin-left: 10rem;
@@ -28,13 +26,12 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  margin: 5rem  ;
+  margin: 5rem;
   width: 50vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
   color: rgb(111, 42, 12);
-
 }
 
 .faq {
@@ -63,7 +60,7 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color:#fd7e14;
+  background-color: #fd7e14;
   text-align: center;
   color: #fff2e8;
 }
@@ -99,7 +96,7 @@
   border-radius: 2rem;
 }
 
-.img-icon{
+.img-icon {
   width: 2rem;
   height: 2rem;
   transform: rotateX(150deg);
@@ -111,7 +108,7 @@
   max-height: 0;
   overflow: hidden;
   transition: 8s ease;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .content.show {
@@ -129,5 +126,3 @@
   padding: 0.3rem;
   /* border-radius: 50%; */
 }
-
-
