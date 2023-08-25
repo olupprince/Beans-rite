@@ -8,7 +8,10 @@ function Newsletter() {
     <section id="contacts" className={classes.containerz}>
       <div className={classes.wrapper}>
         <h4 className={classes.subtitle}>Get our latest offers</h4>
-        <h2 className={classes.title}>Newsletter</h2>
+        <h2 className={classes.title}>
+          Ne<span className={classes.orange}>w</span>slet
+          <span className={classes.orange}>t</span>er
+        </h2>
         <div className={classes.inputContainer}>
           <input type="text" placeholder="Enter email..." />
           <AiOutlineSend className={classes.sendIcon} />

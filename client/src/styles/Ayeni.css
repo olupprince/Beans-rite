@@ -1,24 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: sans-serif;
+  color: #090614;
+  /* font-family: "Quicksand"; */
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+.section-faq {
+  background-color: #f7f7f7;
+}
+
 .containerxx {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding: 4rem auto;
   position: relative;
-  width: 100vw;
-  height: 100%;
+  margin: 0 3rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  gap: 2rem;
-  background-color: #fff2e8;
+  /* gap: 2rem; */
+  align-items: center;
 }
 .image {
-  width: 30rem;
-  max-height: 20rem;
-  margin-left: 10rem;
-  margin-top: 20rem;
+  width: 100%;
+  /* height: 100%; */
 }
-
+.faq-img-box {
+  width: 50%;
+}
 .wrapper {
   position: relative;
   font-family: "Rubik", sans-serif;
@@ -27,7 +47,7 @@
   flex-direction: column;
   padding: 1rem;
   margin: 5rem;
-  width: 50vw;
+  width: 50%;
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -35,13 +55,13 @@
 }
 
 .faq {
-  width: 5rem;
-  margin: 1rem;
-  font-size: 2rem;
-  text-decoration: underline;
+  font-size: 3rem;
+  /* text-decoration: underline; */
   color: rgb(111, 42, 12);
 }
-
+.faq-icon {
+  font-size: 5rem;
+}
 .accordion {
   width: 650px;
 }
@@ -89,10 +109,9 @@
 
 .cont {
   position: relative;
-  width: 625px;
-  background-color: rgba(190, 115, 57, 0.771);
-  padding-left: 15%;
-  padding-right: 15%;
+  width: 49rem;
+  background-color: #f7f7f7;
+  padding: 0 2rem 0 2rem;
   border-radius: 2rem;
 }
 

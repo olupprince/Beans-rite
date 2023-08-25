@@ -15,7 +15,7 @@ export default function Footer() {
     <section id="faq" className={classes.containerv}>
       <div className={classes.wrapper}>
         <div className={classes.col}>
-          <img src={img}></img>
+          <img src={img} alt="logo"></img>
         </div>
         <div className={classes.col}>
           <h2 className={classes.title}>Working days</h2>
@@ -24,6 +24,15 @@ export default function Footer() {
             <li className={classes.workingTime}>08:00 - 22:00</li>
             <li>Saturday</li>
             <li className={classes.workingTime}>08:00 - 20:00</li>
+          </ul>
+        </div>
+        <div className={classes.col}>
+          <h2 className={classes.title}>Recipies</h2>
+          <ul className={classes.list}>
+            <li>We use only the finest grains</li>
+            <li>with a blend of organic ingridents.</li>
+            <li>Every dish is an experience</li>
+            <li>prepared for your delight.</li>
           </ul>
         </div>
         <div className={classes.col}>
