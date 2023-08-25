@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { useCart } from '../Hooks/useCart';
 
 function BensCard({ menu }) {
-  const [selectiedId, setSelectedId] = useState(null);
-
+  const [quantityOrdered, setQuantityOrdered] = useState(0);
+  const { addToCart, removeFromCart } = useCart(); 
+  
   function handleClick(id) {
     setSelectedId(id !== selectiedId ? id : null);
+
+  function handleCountUp() {
+    setQuantityOrdered(quantityOrdered + 1);
+    addToCart(menu, quantityOrdered + 1);
+  }
+
+  function handleCountDown() {
+    if (quantityOrdered >= 1) {
+      setQuantityOrdered(quantityOrdered - 1);
+      removeFromCart(menu._id);
+    }
   }
 
   return (
@@ -34,7 +47,7 @@ function BensCard({ menu }) {
         </span>
         <button
           className={selectiedId === menu.id ? "menu-btn bg-red" : "menu-btn"}
-          onClick={() => handleClick(menu.id)}
+          onClick={() => handleCountUP}
         >
           {menu.id === selectiedId ? menu.addedToCart : menu.cart}
         </button>
