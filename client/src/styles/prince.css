@@ -159,7 +159,7 @@ input:hover{
     margin: 0 auto;
     background-color: #faf2ec;
     border-radius: 8px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .allItems{
     display: flex;
@@ -186,5 +186,39 @@ input:hover{
 }
 .h2p{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+.bill{
+    text-align: center;
+    font-size: 3.5rem;
+}
+.cartTotal{
+    border: .1rem solid #fd7e14;
+    height: 6rem;
+    width: 56rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.totalCart{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0.2rem 1rem 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgpp{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10px;
+    padding: 1px;
+    background-color: #fd7e14;
+    /* margin-left: 1rem; */
+}
+.hrp{
+    width: 40rem;
+    margin: 0 auto;
+    opacity: 0.3;
+    margin-top: 1.3rem;
 }
