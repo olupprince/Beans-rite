@@ -59,8 +59,8 @@ const CartProvider = ({ children }) => {
       try {
         const response = await axios.get("http://localhost:5000/api/menu");
         const menuItems = response.data.menuItems;
-
-        const initialCartItems = menuItems.slice(1, 4).map((food) => ({
+        
+        const initialCartItems = menuItems.slice(1,1).map((food) => ({
           food,
           price: food.price,
           quantity: 1
@@ -68,6 +68,7 @@ const CartProvider = ({ children }) => {
 
         setCartItems(initialCartItems);
         calculateTotal(initialCartItems);
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -81,7 +82,7 @@ const CartProvider = ({ children }) => {
       value={{
         cart: { items: cartItems, totalPrice, totalCount },
         changeQuantity,
-        addToCart,
+         addToCart,
         removeFromCart,
       }}
     >

@@ -13,7 +13,7 @@ function BensCard({ menu }) {
   function handleCountDown() {
     if (quantityOrdered >= 1) {
       setQuantityOrdered(quantityOrdered - 1);
-      removeFromCart(menu.id);
+      removeFromCart(menu._id);
     }
   }
 
@@ -42,7 +42,7 @@ function BensCard({ menu }) {
           <sup className="naira">&#8358;</sup>
           {menu.price}
         </span>
-        <button className="btn btn-effect" onClick={handleCountDown}>
+        <button className="btn btn-effect" onClick={handleCountDown} >
           -
         </button>
         <span className="quantity-ordered">{quantityOrdered}</span>

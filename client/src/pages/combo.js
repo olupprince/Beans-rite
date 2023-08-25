@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import '../styles/Yemi.css';
 import axios from 'axios';
 import pulpy from '../img/puppy.webp';
+import { useCart } from '../Hooks/useCart';
+
 
 const Combo = () => {
+  const { addToCart } = useCart();
+
   const [combos, setCombos] = useState([]);
 
   useEffect(() => {
@@ -43,7 +47,7 @@ const Combo = () => {
                   </p>
                 </button>
                 <p className='value'>1</p>
-                <button className='plus' >
+                <button className='plus'onClick={() => addToCart(combo)} >
                   <p className='plu'>
                     +
                   </p>
