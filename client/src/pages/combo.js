@@ -5,6 +5,11 @@ import pulpy from "../img/puppy.webp";
 
 const Combo = () => {
   const [combos, setCombos] = useState([]);
+  const [selectedId, setSelectedId] = useState();
+
+  function handleClick(id) {
+    setSelectedId(id !== selectedId ? id : null);
+  }
 
   useEffect(() => {
     axios
@@ -46,7 +51,15 @@ const Combo = () => {
               <p className="foodname">{combo.title}</p>
               <p className="price">#{combo.price}</p>
               <div className="toggle">
-                <button className="menu-btn">Add to cart &nbsp; 🛒</button>
+                <button
+                  onClick={() => handleClick(combo._id)}
+                  className={selectedId === combo._id ? "bg-red" : "combo-btn"}
+                >
+                  {selectedId === combo._id
+                    ? combo.addedToCart + " 🛒"
+                    : combo.cart + " 🛒"}
+                </button>
+                {/* <button className="menu-btn">Add to cart &nbsp; 🛒</button> */}
               </div>
             </div>
           ))}
