@@ -9,7 +9,7 @@ import Homepage from "./Homepage";
 import Cart from "./pages/Cart";
 import Services from "./pages/Services";
 import SpecialOffer from "./pages/SpecialOffer";
-import Flutterwave from './flutterwave'
+import Flutterwave from './Flutterwave'
 
 const App = () => {
   return (

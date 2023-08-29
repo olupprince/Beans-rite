@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import beans from './img/beansLogo.png';
 import flutt from './img/flawt.jpeg';
-import './flutterwave.css';
+import './styles/flutterwave.css';
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
-import {useLocation} from 'react-router-dom;'
+import { useLocation } from 'react-router-dom';
 
 const Flutterwave = () => {
 
-  const locate =useLocation();
-  const {values}= locate.state;
+  const locate = useLocation();
+
+  const totalAmount = locate.state;
+  console.log(totalAmount);
 
   const [paymentData, setPaymentData] = useState({
     amount: 0,
@@ -17,22 +19,22 @@ const Flutterwave = () => {
     name: '',
   });
 
-  useEffect(() => {
-    // Fetch data from your backend
-    fetch('http://localhost:5000/payment-data')
-      .then((response) => response.json())
-      .then((data) => {
-        setPaymentData(data); // Update the paymentData state with fetched data
-      })
-      .catch((error) => {
-        console.error('Error fetching payment data:', error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Fetch data from your backend
+  //   fetch('http://localhost:5000/payment-data')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setPaymentData(data); // Update the paymentData state with fetched data
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching payment data:', error);
+  //     });
+  // }, []);
 
   const config = {
     public_key: 'FLWPUBK_TEST-25dcf4c3dcae9a5f4c62a009913585b0-X',
     tx_ref: Date.now(),
-    amount: values.amount,
+    amount: totalAmount,
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
     customer: {
