@@ -61,7 +61,7 @@ body {
   transition: all 0.4s;
   margin-top: 20px;
   padding-right: 10px;
-  margin-right: 50px;
+  /* margin-left: 20rem; */
 }
 .nav-cart:hover {
   color: #e39b61;
@@ -78,6 +78,7 @@ body {
 .nav-btn {
   color: #fff2e8;
   text-decoration: none;
+  margin-left: 20rem;
 }
 .nav-btn-box {
   margin-left: 30rem;

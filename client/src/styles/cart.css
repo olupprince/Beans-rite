@@ -1,25 +1,44 @@
-.cart-all{
-  margin: 10rem auto;
-  width: 60rem;
-  height: 100%;
-  background: coral;
+.nav-reciever{
+  height: 8rem;
 }
-/* .cart-container {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-} */
+.cart-all{
+  margin: 0 auto;
+  width: 80rem;
+  height: 100%;
+  background: #faf2ec;
+}
+.cart-container {
+  /* background-color: #fff; */
+  /* border: 1px solid #ccc; */
+  text-align: center;
+  /* padding: 10px; */
+}
 
 .cart-item {
   display: flex;
-  margin-bottom: 10px;
+  /* background-color: #4a55d3; */
+  margin-top: 2rem;
+  margin-bottom: 20px;
+}
+.bill{
+  font-size: 3rem;
+  font-weight: 800;
+  color: #616161;
+  margin-top: 1rem;
 }
 
 .cart-item-image {
   width: 100px;
 }
 .picc{
-  width: 50%;
+  /* width: 50%; */
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
+    border-radius: 10px;
+    background-color: #fd7e14;
+    padding: 1px;
 }
 
 .cart-item-name {
@@ -34,15 +53,56 @@
 
 .cart-item-price {
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
 }
-
-.remove-btn{
-  width: 30px;
+.cart-check{
+    background:#fd7e14;
+    color: #fff;
+    width: 30%;
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    margin: 1.5rem auto;
+    /* margin-top: 1.5rem; */
+    /* margin-left: 22.5rem; */
 }
-cart-total{
-  border:1px solid 20rem;
+.quantity-select{
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fd7e14;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.between{
+  position: absolute;
+  margin-left: 70rem;
+}
+
+
+.remove{
+  width: 8rem;
+  height: 3rem;
+  text-align: center;
+  background-color: #fd7e14;
+  color: #fff;
+  border-radius: 5px;
+}
+.cart-total{
+  border:.1rem dashed #090614;
+  height: 4rem;
+  width: 45rem;
+  border-radius: 8px;
+  margin: 0 auto;
 }
 
 .cart-total-count {
