@@ -77,9 +77,15 @@ function Cart() {
               ))}
             </ul>
             <div className="cart-total">
-              {/* <div className="cart-total-count">{cart.totalCount}</div> */}
-              <div className="cart-total-price">
-                <Price price={cart.totalPrice} />
+              {/* <div className="cart-all">
+                <p>Items:</p>
+                <div className="cart-total-count">{cart.totalCount}</div>
+              </div> */}
+              <div className="cart-cart">
+                <p>Total:</p>
+                <div className="cart-total-price">
+                  <Price price={cart.totalPrice} />
+                </div>
               </div>
             </div>
             <Link className="cart-check" to="/checkout">

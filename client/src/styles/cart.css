@@ -1,11 +1,13 @@
 .nav-reciever{
   height: 8rem;
+  background-color: #fd7e14;
 }
 .cart-all{
   margin: 0 auto;
   width: 80rem;
   height: 100%;
   background: #faf2ec;
+  padding: 2rem 0 2rem 0;
 }
 .cart-container {
   /* background-color: #fff; */
@@ -13,7 +15,13 @@
   text-align: center;
   /* padding: 10px; */
 }
+.cart-cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem 0 5rem;
 
+}
 .cart-item {
   display: flex;
   /* background-color: #4a55d3; */
@@ -99,11 +107,14 @@
 }
 .cart-total{
   border:.1rem dashed #090614;
-  height: 4rem;
-  width: 45rem;
+  height: 6rem;
+  width: 60rem;
   border-radius: 8px;
   margin: 0 auto;
 }
+/* .cart-cart{
+  margin-right:10rem ;
+} */
 
 .cart-total-count {
   font-size: 16px;
