@@ -1,23 +1,30 @@
-import React, { useState } from 'react';
-import { useCart } from '../Hooks/useCart';
+import React, { useState } from "react";
+import { useCart } from "../Hooks/useCart";
 
 function BensCard({ menu }) {
-  const [quantityOrdered, setQuantityOrdered] = useState(0);
-  const { addToCart, removeFromCart } = useCart(); 
-  
+  // const [quantityOrdered, setQuantityOrdered] = useState(0);
+  const { addToCart, removeFromCart } = useCart();
+  const [selectiedId, setSelectedId] = useState(null);
+
   function handleClick(id) {
     setSelectedId(id !== selectiedId ? id : null);
 
-  function handleCountUp() {
-    setQuantityOrdered(quantityOrdered + 1);
-    addToCart(menu, quantityOrdered + 1);
-  }
-
-  function handleCountDown() {
-    if (quantityOrdered >= 1) {
-      setQuantityOrdered(quantityOrdered - 1);
+    if (menu.id === selectiedId) {
       removeFromCart(menu._id);
+    } else {
+      addToCart(menu);
     }
+
+    // function handleCountUp() {
+    //   setQuantityOrdered(quantityOrdered + 1);
+    //   addToCart(menu, quantityOrdered + 1);
+    // }
+
+    // function handleCountDown() {
+    //   if (quantityOrdered >= 1) {
+    //     setQuantityOrdered(quantityOrdered - 1);
+    //     removeFromCart(menu._id);
+    //   }
   }
 
   return (
@@ -47,7 +54,7 @@ function BensCard({ menu }) {
         </span>
         <button
           className={selectiedId === menu.id ? "menu-btn bg-red" : "menu-btn"}
-          onClick={() => handleCountUP}
+          onClick={() => handleClick(menu.id)}
         >
           {menu.id === selectiedId ? menu.addedToCart : menu.cart}
         </button>

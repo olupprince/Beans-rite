@@ -11,15 +11,21 @@ function CartItem({ item }) {
   return (
     <li key={item.food._id} className="cart-item">
       <div className="cart-item-image">
-        <img src={`http://localhost:5000/${item.food.foodImg}`} alt={item.food.food} className="picc" />
+        <img
+          src={`http://localhost:5000/${item.food.foodImg}`}
+          alt={item.food.food}
+          className="picc"
+        />
       </div>
       <div className="cart-item-name">
         <Link to={""}>{item.food.food}</Link>
       </div>
       <div className="cart-item-quantity">
-        <select 
+        <select
           value={item.quantity}
-          onChange={e => changeQuantity(item.food._id, Number(e.target.value))}
+          onChange={(e) =>
+            changeQuantity(item.food._id, Number(e.target.value))
+          }
         >
           <option>1</option>
           <option>2</option>
@@ -55,25 +61,25 @@ function Cart() {
 
   return (
     <div>
-      {cart && cart.items.length > 0 && (
-        <div className="cart-container">
-          <Title title="Cart Page" margin="1.5rem 0 0 2.5rem" />
-          <ul className="cart-items">
-            {cart.items.map((item) => (
-              <CartItem item={item} key={item.food._id} />
-            ))}
-          </ul>
-          <div className="cart-total">
-            <div className="cart-total-count">
-              {cart.totalCount}
+      <div className="cart-all">
+        {cart && cart.items.length > 0 && (
+          <div className="cart-container">
+            <Title title="Cart" />
+            <ul className="cart-items">
+              {cart.items.map((item) => (
+                <CartItem item={item} key={item.food._id} />
+              ))}
+            </ul>
+            <div className="cart-total">
+              <div className="cart-total-count">{cart.totalCount}</div>
+              <div className="cart-total-price">
+                <Price price={cart.totalPrice} />
+              </div>
             </div>
-            <div className="cart-total-price">
-              <Price price={cart.totalPrice} />
-            </div>
+            <Link to="/checkout">Proceed To Checkout</Link>
           </div>
-          <Link to="/checkout">Proceed To Checkout</Link>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
