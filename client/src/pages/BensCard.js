@@ -55,5 +55,5 @@ function BensCard({ menu }) {
     </div>
   );
 }
-
-export default BensCard;
+}
+export default  BensCard;
