@@ -22,8 +22,7 @@ function FAQs() {
         </div>
         <div className="wrapper">
           <h2 className="faq">
-            {" "}
-            FAQs &nbsp;<span className="faq-icon"> 📙 </span>{" "}
+            FAQs &nbsp;<span className="faq-icon"> 📙 </span>
           </h2>
           <div className="accordion">
             {data.map((item, i) => (
@@ -33,9 +32,8 @@ function FAQs() {
                   <div className="title" onClick={() => toggle(i)}>
                     <div className="quest">
                       <h2>{item.question}</h2>
-
                       <span>
-                        {selected === i ? <span>❌</span> : <span> ⬇</span>}{" "}
+                        {selected === i ? <span>❌</span> : <span> ⬇</span>}
                       </span>
                     </div>
                   </div>

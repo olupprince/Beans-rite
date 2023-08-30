@@ -58,7 +58,7 @@ body {
   position: relative;
 }
 .Card-2::after {
-  content: "Best value";
+  content: "Hottest";
   position: absolute;
   top: 6%;
   right: -22%;

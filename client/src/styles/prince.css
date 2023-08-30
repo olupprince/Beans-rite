@@ -1,152 +1,224 @@
-
-/* Container Styles */
-.containerww {
-    margin: 20px auto;
-    width: 100%;
-    max-width: 20rem;
-    background-color: white;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+/* 
+body{
+    background: darksalmon;
 }
-
-/* Form Styles */
-.containerww .form input {
-    width: 100%;
-    height: 2.3rem;
-    border: 1px solid #ccc;
+.overall{
+    background-color: #e1dede;
+}
+.containerp{
+    width: 65rem;
+    height: 64rem;
+    margin: 0 auto;
+    background-color: #faf2ec;
     border-radius: 8px;
-    padding: 0.5rem;
-    background-color: aliceblue;
-    margin-top: 0.7rem;
+    overflow: hidden;
 }
-
-/* Horizontal Rule Styles */
-#hr1 {
-    width: 100%;
-    margin: 1rem 0;
-    opacity: 0.3;
-}
-
-/* Order Styles */
-.order1 {
-    margin-top: 1rem;
-    line-height: 2rem;
-}
-
-/* Image Styles */
-.containerww .imgww {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 6px;
-}
-
-/* Item Container Styles */
-.cont2 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-/* Object Styles */
-.object1 {
-    margin-top: 1.5rem;
-}
-
-/* Button Styles */
-.minusw,
-.pwlus {
-    background-color: #c3bfbf;
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.pwlus {
-    background-color: orange;
-    color: #fff;
-    margin-left: 1rem;
-}
-
-/* Value Styles */
-.valwue {
-    margin-left: 1rem;
-}
-
-/* Delicacy Styles */
-.delicacy1 {
-    padding-left: 1rem;
-    margin-top: 0.3rem;
-}
-
-/* Border Styles */
-.border1 {
-    border: 1px solid black;
+.containerp input{
+    width: 22rem;
     height: 4rem;
-    width: 100%;
-    max-width: 17rem;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
+    text-align: center;
+    margin-left: 21.5rem;
+    margin-top: 2rem;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
 }
-
-/* Total Styles */
-.total1 {
+input:hover{
+    border: 1px solid #fd7e14;
+    background-color: snow;
+    transform: scale(1.07);
+}
+.containerp h4{
+    text-align: center;
+    font-size: 1.9rem;
+}
+.orderp{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.imgp{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10px;
+    padding: 1px;
+    background-color: #fd7e14;
+    margin-left: 1rem;
+}
+.hrp{
+    width: 40rem;
+    margin: 0 auto;
+    opacity: 0.3;
+    margin-top: 1.3rem;
+}
+.contpp{
+    display: flex;
+    margin-top: 1.3rem;
+}
+.objectp{
+    margin-top: 1rem;
+    /* margin-left: 3rem; */
+/* }
+.delicacyp{
+    margin-left: 2rem;
+}
+.twop{
+    margin-left: 2rem;
+}
+.plusp{
+    margin-left: 2rem;
+}
+.valuep{
+    margin-left: 33rem;
+}
+.orderpp{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.borderp{
+    border: .1rem solid #fd7e14;
+    height: 6rem;
+    width: 56rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.totalp{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
-
-/* Button Styles */
-.btn22 {
-    background: orange;
+.amountp{
+    font-size: 15px;
+    padding: 2rem 0 0 1rem;
+}
+.amountpp{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0.2rem 1rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn22{
+    background:#fd7e14;
     color: #fff;
-    width: 100%;
-    max-width: 16rem;
-    height: 2rem;
+    width: 24rem;
+    height: 3rem;
     text-align: center;
     border-radius: 5px;
     border: none;
-    font-size: 1rem;
+    font-size: 11px;
     cursor: pointer;
-    margin-top: 1.5rem;
-    transition: background-color 0.3s;
+    margin-top: 2.5rem;
+    margin-left: 20rem;
+    align-items: center;
 }
-
-/* Amount Styles */
-.amount11 {
-    padding: 0.5rem 0 0 1rem;
-    color: #b0acac;
-    font-size: 1rem;
+.btn22:hover{
+    transform: scale(1.1);
 }
+.order-summary{
+    margin-top: 3rem; */
+/* }  */
 
-/* Number Styles */
-.number1 {
-    margin-left: 1.5rem;
-}
-
-/* Responsive Media Queries */
-@media screen and (max-width: 768px) {
-    .cont2 {
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .containerww {
+/* @media screen and (max-width: 480px) {
+    .containerp {
         padding: 1rem;
+        width: 38rem;
+        align-items: center;
     }
-    .containerww .form input {
-        width: 100%;
+    .containerp input {
+        width: 12rem;
+        margin: 0 auto;
+        margin-top: 1.5rem;
     }
+    .containerp h4{
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .hrp{
+        width: 0px;
+    }
+    .borderp{
+        width: 28rem;
+        margin: 0;
+    }
+    .btn22{
+        margin: 0;
+        width: 12rem;
+    }
+} */
+
+.containerp{
+    /* background-color: chocolate; */
+    width: 65rem;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #faf2ec;
+    border-radius: 8px;
+    /* overflow: hidden; */
+}
+.allItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.btn22{
+    background:#fd7e14;
+    color: #fff;
+    width: 24rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 2.5rem;
+    margin-left: 20rem;
+    align-items: center;
+}
+.btn22:hover{
+    transform: scale(1.1);
+}
+.h2p{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.bill{
+    text-align: center;
+    font-size: 3.5rem;
+}
+.cartTotal{
+    border: .1rem solid #fd7e14;
+    height: 6rem;
+    width: 56rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.totalCart{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0.2rem 1rem 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgpp{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10px;
+    padding: 1px;
+    background-color: #fd7e14;
+    /* margin-left: 1rem; */
+}
+.hrp{
+    width: 40rem;
+    margin: 0 auto;
+    opacity: 0.3;
+    margin-top: 1.3rem;
 }

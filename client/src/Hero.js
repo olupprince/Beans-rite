@@ -1,6 +1,6 @@
 import img from "./beansLogo.png";
-import React from "react";
 
+import React from "react";
 
 export default function Hero() {
   return (
