@@ -6,7 +6,7 @@ import LoginPage from "./components/loginPage";
 import RegisterPage from "./components/registerPage";
 import { UserContextProvider } from "./userContext";
 import Homepage from "./Homepage";
-import Cart from "./pages/cart";
+import Cart from "./pages/Cart";
 import Services from "./pages/Services";
 import SpecialOffer from "./pages/SpecialOffer";
 import Flutterwave from './flutterwave'
