@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import "../styles/Yemi.css";
 import axios from "axios";
 import pulpy from "../img/puppy.webp";
-import { useCart } from "./CartContext";
+import { useCart } from "../Hooks/useCart";
 
 const Combo = () => {
-  const [combos, setCombos] = useState([]);
   const { addToCart } = useCart();
-  const newCartItems = { ...combos, combos: combos + 1 };
-  addToCart(newCartItems);
+
+  const [combos, setCombos] = useState([]);
+  const [selectedId, setSelectedId] = useState();
+
+  function handleClick(id) {
+    setSelectedId(id !== selectedId ? id : null);
+  }
 
   useEffect(() => {
     axios
@@ -24,9 +28,10 @@ const Combo = () => {
   console.log("combo list", combos);
 
   return (
-    <div className="ComboDeal">
+    <section>
+      <div className="top"></div>
       <div className="container">
-        <h1 className="combo">Combo Deals 🔥</h1>
+        <h1 className="combo">Combo Deals</h1>
         <div className="grid">
           {combos.map((combo) => (
             <div className="box" key={combo._id}>
@@ -49,20 +54,15 @@ const Combo = () => {
               <p className="foodname">{combo.title}</p>
               <p className="price">#{combo.price}</p>
               <div className="toggle">
-                <button className="minus">
-                  <p className="min">-</p>
-                </button>
-                <p className="value">1</p>
-
-                <button className="plus">
-                  <p className="plu">+</p>
+                <button className="menu-btn" onClick={() => addToCart(combo)}>
+                  Add to cart &nbsp; 🛒
                 </button>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

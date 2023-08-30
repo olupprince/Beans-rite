@@ -1,22 +1,30 @@
 import React, { useState } from "react";
-import { useCart } from "./CartContext";
-// import Cart from "./Cart"
+import { useCart } from "../Hooks/useCart";
 
 function BensCard({ menu }) {
-  const [quantityOrdered, setQuantityOrdered] = useState(0);
-  const { addToCart } = useCart();
-  function handleCountUp() {
-    setQuantityOrdered(quantityOrdered + 1);
-    const newCartItems = { ...menu, quantityOrdered: quantityOrdered + 1 };
-    // console.log(newItems);
-    addToCart(newCartItems);
-    // setCartItems([...cartItems, newItems]);
-  }
+  // const [quantityOrdered, setQuantityOrdered] = useState(0);
+  const { addToCart, removeFromCart } = useCart();
+  const [selectiedId, setSelectedId] = useState(null);
 
-  function handleCountDown() {
-    if (quantityOrdered >= 1) {
-      setQuantityOrdered(quantityOrdered - 1);
+  function handleClick(id) {
+    setSelectedId(id !== selectiedId ? id : null);
+
+    if (menu.id === selectiedId) {
+      removeFromCart(menu._id);
+    } else {
+      addToCart(menu);
     }
+
+    // function handleCountUp() {
+    //   setQuantityOrdered(quantityOrdered + 1);
+    //   addToCart(menu, quantityOrdered + 1);
+    // }
+
+    // function handleCountDown() {
+    //   if (quantityOrdered >= 1) {
+    //     setQuantityOrdered(quantityOrdered - 1);
+    //     removeFromCart(menu._id);
+    //   }
   }
 
   return (
@@ -26,30 +34,29 @@ function BensCard({ menu }) {
           className="img"
           src={`http://localhost:5000/${menu.foodImg}`}
           alt="beans img"
-          onClick={handleCountUp}
         />
         <div className="description">
           <strong className="dish-name">{menu.food}</strong>
           <p className="dish-description"> {menu.ingredients}</p>
           <div>
-            <span>Available {menu.available} </span>
+            <span className="description-status">
+              Available {menu.available}{" "}
+            </span>
             <span> &bull;</span>
-            <span> sold {menu.sold}</span>
+            <span className="description-status"> sold {menu.sold}</span>
           </div>
         </div>
       </div>
       <div className="click-order">
-        <span className="price">
-          {" "}
-          <sup className="naira">&#8358;</sup>
+        <span className={selectiedId === menu.id ? "color-red" : "price"}>
+          <sup className={selectiedId === menu.id && "color-red"}>&#8358;</sup>
           {menu.price}
         </span>
-        <button className="btn btn-effect" onClick={handleCountDown}>
-          -
-        </button>
-        <span className="quantity-ordered">{quantityOrdered}</span>
-        <button className="btn btn-effect" onClick={handleCountUp}>
-          +
+        <button
+          className={selectiedId === menu.id ? "menu-btn bg-red" : "menu-btn"}
+          onClick={() => handleClick(menu.id)}
+        >
+          {menu.id === selectiedId ? menu.addedToCart : menu.cart}
         </button>
       </div>
     </div>
