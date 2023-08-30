@@ -9,7 +9,7 @@ import Homepage from "./Homepage";
 import Cart from "./pages/cart";
 import Services from "./pages/Services";
 import SpecialOffer from "./pages/SpecialOffer";
-
+import Flutterwave from './flutterwave'
 const App = () => {
   return (
     <UserContextProvider>
@@ -23,6 +23,7 @@ const App = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/specialoffers" element={<SpecialOffer />} />
             <Route path="/api/getcombos" element={<Combo />} />
+            <Route path="/payment" element={<Flutterwave />} />
           </Route>
         </Routes>
       </Router>

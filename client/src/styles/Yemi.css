@@ -133,17 +133,35 @@ body {
 button {
   background-color: #fd7e14;
   color: #fff;
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
   border: none;
   border-radius: 100%;
   cursor: pointer;
+  text-align: center;
   width: 28px;
   height: 28px;
   transition: background-color 0.2s ease-in-out;
 }
-
+.combo-btn {
+  background-color: #fd7e14;
+  border-radius: 0 3rem 3rem 0;
+  padding: 0.5rem 1rem;
+  width: auto;
+}
 button:hover {
   background-color: #ff9800;
+}
+.bg-red {
+  background-color: red;
+  border-radius: 0 3rem 3rem 0;
+  padding: 0.5rem 1rem;
+  width: auto;
+}
+.bg-red:hover {
+  background-color: red;
+}
+.color-red {
+  color: red;
 }
 
 .minus,

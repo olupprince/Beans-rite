@@ -1,28 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import BensCard from './BensCard';
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import BensCard from "./BensCard";
+import axios from "axios";
+// import Cart from "./Cart";
 
 function MenuContainer() {
   const [menus, setMenus] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-    axios.get (`http://localhost:5000/api/menu`)
-    .then(response => {
-      setMenus(response.data.menuItems)
-    })
-      .catch(error => {
-        console.error('Error fetching menus:', error);
-        console.log('Error response:', error.response);
-       
+    axios
+      .get(`http://localhost:5000/api/menu`)
+      .then((response) => {
+        setMenus(response.data.menuItems);
+      })
+      .catch((error) => {
+        console.error("Error fetching menus:", error);
+        console.log("Error response:", error.response);
       });
   }, []);
 
-
   return (
     <div className="menu-container">
-    {menus.map(menu => (
-      <BensCard menu={menu} key={menu._id} />
-    ))}
-  </div>
+      {menus.map((menu) => (
+        <BensCard
+          menu={menu}
+          key={menu._id}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+        />
+      ))}
+      {/* <Cart/> */}
+    </div>
   );
 }
 

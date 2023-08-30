@@ -39,7 +39,7 @@
 // export default Cart;
 
 import React from "react";
-import { useCart } from "../Hooks/useCart";
+import { useCart } from "./CartContext";
 import "../styles/prince.css";
 
 function Cart() {

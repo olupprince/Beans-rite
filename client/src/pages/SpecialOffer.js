@@ -25,7 +25,7 @@ function SpecialOffer() {
             <li className="offer-list-item">❌</li>
           </ul>
           <div>
-            <button className="Btn-Pack">Add Package</button>
+            <button className="Btn-Pack">Learn more</button>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ function SpecialOffer() {
             <li className="offer-list-item">1 free meal Monthly 😍</li>
           </ul>
           <div>
-            <button className="Btn-Pack">Add Package</button>
+            <button className="Btn-Pack">Learn more</button>
           </div>
         </div>
 
@@ -57,7 +57,7 @@ function SpecialOffer() {
             <li className="offer-list-item">❌</li>
           </ul>
           <div>
-            <button className="Btn-Pack">Add Package</button>
+            <button className="Btn-Pack">Learn more</button>
           </div>
         </div>
       </div>
