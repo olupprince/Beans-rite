@@ -1,28 +1,26 @@
 const express = require("express");
 const app = express();
-const cookieParser = require("cookie-parser");
-const jwt = require("jsonwebtoken");
-require("dotenv/config");
-const mongoose = require("./db/db");
-const router = require("./routes/router");
-const port = process.env.port || 5000;
-const cors = require("cors");
-const Combo = require("./models/comboSchema");
-const { foodImgUpload } = require("./utils/fileUpload");
-const uploadTwo = require("./utils/fileuploadTwo");
-const Menu = require("./models/menuSchema");
-const secret = process.env.SECRET_KEY;
+const cookieParser = require('cookie-parser')
+const jwt = require('jsonwebtoken');
+require('dotenv/config');
+const mongoose = require('./db/db');
+const router = require('./routes/router');
+const port = process.env.port || 5000
+const cors = require('cors');
+const Combo = require('./models/comboSchema');
+const { foodImgUpload } = require('./utils/fileUpload');
+const uploadTwo = require('./utils/fileuploadTwo');
+const Menu = require('./models/menuSchema');
+const secret = process.env.SECRET_KEY 
 
-app.use("/foodImgFolder", express.static(__dirname + "/foodImgFolder"));
-app.use("/images", express.static(__dirname + "/images"));
-app.use(
-  cors({
-    credentials: true,
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST", "PUT", "DELETE"], // Specify the HTTP methods you want to allow
-    allowedHeaders: ["Content-Type", "Authorization"], // Specify the allowed headers
-  })
-);
+app.use('/foodImgFolder', express.static(__dirname + '/foodImgFolder'))
+app.use('/images', express.static(__dirname + '/images'))
+app.use(cors({
+  credentials: true,
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the HTTP methods you want to allow
+  allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
+}));
 app.use(express.json());
 app.use("/", router);
 app.use(cookieParser());

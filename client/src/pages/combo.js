@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
-import "../styles/Yemi.css";
-import axios from "axios";
-import pulpy from "../img/puppy.webp";
+import React, { useEffect, useState } from 'react';
+import '../styles/Yemi.css';
+import axios from 'axios';
+import pulpy from '../img/puppy.webp';
+import { useCart } from '../Hooks/useCart';
+
 
 const Combo = () => {
+  const { addToCart } = useCart();
+
   const [combos, setCombos] = useState([]);
 
   useEffect(() => {
@@ -46,7 +50,7 @@ const Combo = () => {
               <p className="foodname">{combo.title}</p>
               <p className="price">#{combo.price}</p>
               <div className="toggle">
-                <button className="menu-btn">Add to cart &nbsp; 🛒</button>
+                <button className="menu-btn" onClick={() => addToCart(combo)}>Add to cart &nbsp; 🛒</button>
               </div>
             </div>
           ))}
