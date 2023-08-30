@@ -54,7 +54,7 @@ function BensCard({ menu }) {
         </span>
         <button
           className={selectiedId === menu.id ? "menu-btn bg-red" : "menu-btn"}
-          onClick={() => handleCountUp}
+          onClick={() => handleClick(menu.id)}
         >
           {menu.id === selectiedId ? menu.addedToCart : menu.cart}
         </button>
@@ -63,4 +63,4 @@ function BensCard({ menu }) {
   );
 }
 
-export default BensCard;
+export default  BensCard;
